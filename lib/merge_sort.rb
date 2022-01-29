@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'pry-byebug'
 
 def merge_sort(array)
@@ -5,8 +7,8 @@ def merge_sort(array)
   length = array.length.to_f
   if length > 2
 
-    left_half = merge_sort(array.first((length/2).ceil))
-    right_half = merge_sort(array.last((length/2).floor))
+    left_half = merge_sort(array.first((length / 2).ceil))
+    right_half = merge_sort(array.last((length / 2).floor))
     while left_half.length.positive? || right_half.length.positive?
       if left_half.length.zero?
         answer.push(right_half.shift)
